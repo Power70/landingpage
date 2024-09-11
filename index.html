@@ -1,14 +1,30 @@
-{% extends "layout.html" %}
-{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlobalFarm Market Platform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        .intro-section {
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
 
-{% include "_messages.html" %}
-
-<!-- Header with Logo and Navigation -->
+    <!-- Header with Logo and Navigation -->
     <header class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                GlobalFarm
-            </a>
+            <a class="navbar-brand text-white" href="#">GlobalFarm</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,8 +45,8 @@
     </header>
 
     <!-- Intro Section -->
-    <section class="intro-section" style="background-image: url('{{ url_for('static', filename='images/farm.jpg') }}'); background-size: cover; background-position: center; min-height: 100vh;">
-        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+    <section class="intro-section" style="background-image: url('images/farm.jpg');">
+        <div class="container text-center">
             <h1 class="display-4">GlobalFarm Market Platform</h1>
             <p class="lead">Connecting local farmers to the world</p>
             <a href="/app" class="btn btn-primary mt-4">Explore the App</a>
@@ -45,7 +61,6 @@
                 <!-- Feature 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card shadow h-100">
-                       
                         <div class="card-body text-center">
                             <h5 class="card-title">Global Reach</h5>
                             <p class="card-text">Allow local farmers to showcase their products globally and connect with international buyers.</p>
@@ -55,7 +70,6 @@
                 <!-- Feature 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card shadow h-100">
-                     
                         <div class="card-body text-center">
                             <h5 class="card-title">Seamless Ordering</h5>
                             <p class="card-text">Effortless ordering process with integration to logistics for smooth delivery.</p>
@@ -65,7 +79,6 @@
                 <!-- Feature 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card shadow h-100">
-                        
                         <div class="card-body text-center">
                             <h5 class="card-title">Verified Farmers</h5>
                             <p class="card-text">All registered farmers undergo verification to ensure product quality and authenticity.</p>
@@ -110,4 +123,7 @@
         </div>
     </footer>
 
-{% endblock content %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
